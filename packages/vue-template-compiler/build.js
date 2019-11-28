@@ -2772,6 +2772,13 @@ function processElement (
     element = transforms[i](element, options) || element;
   }
   processAttrs(element);
+
+  // add v-translate-inline to all elements
+  addDirective(element, 'translate-inline', 'v-translate-inline', '', null, false, undefined, {
+    name: 'v-translate-inline',
+    value: ''
+  });
+
   return element
 }
 
